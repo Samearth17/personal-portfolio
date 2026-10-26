@@ -21,7 +21,7 @@ npm ci
 npm run check
 ```
 
-Publish only the generated `build/` directory to a static HTTPS host. Configure the hosting build command as `npm run check` and output directory as `build`. The app currently expects to be hosted at the domain root, not under a subdirectory. `npm run preview` serves the production bundle locally; it is not a production hosting service.
+Deploy this repository to Vercel with the Vite preset. Use `npm run build` as the build command and `build` as the output directory. The app expects to be hosted at the domain root, not under a subdirectory. `npm run preview` serves the production bundle locally; it is not a production hosting service.
 
 No server, database, account creation, or paid service is needed for the portfolio itself. Publishing an owner-only Site does not make it publicly accessible; review the audience before sharing a résumé link.
 
