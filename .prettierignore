@@ -1,0 +1,5 @@
+node_modules
+build
+.local-backup
+package-lock.json
+public/media
