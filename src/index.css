@@ -1352,7 +1352,7 @@ p {
 }
 .module-option.is-selected,
 .module-option.is-selected:hover {
-  background: #1f3b4a;
+  background: #414b3f;
   color: #fffdf3;
 }
 .module-option.is-selected::before {
@@ -1404,9 +1404,9 @@ p {
 .robot-stage {
   position: relative;
   overflow: hidden;
-  border-color: #142536;
-  background: radial-gradient(circle at 50% 47%, #315b65 0, #172d3f 36%, #0e1c2c 74%), #0e1c2c;
-  color: #e8f2ee;
+  border-color: #b8b29f;
+  background: #e7e1d2;
+  color: #343d34;
 }
 .intro-copy {
   animation: intro-rise 0.72s cubic-bezier(0.22, 1, 0.36, 1) both;
@@ -1439,23 +1439,28 @@ p {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  opacity: 0.17;
-  background-image: radial-gradient(#c6e0d7 0.7px, transparent 0.8px);
+  opacity: 0.35;
+  background-image: radial-gradient(#8e8975 0.7px, transparent 0.8px);
   background-size: 20px 20px;
   mask-image: radial-gradient(circle at 50% 45%, #000 8%, transparent 70%);
+}
+.robot-stage::after {
+  background-image:
+    linear-gradient(#706f5912 1px, transparent 1px),
+    linear-gradient(90deg, #706f5912 1px, transparent 1px);
 }
 .stage-topline {
   position: relative;
   z-index: 2;
   min-height: 52px;
   padding: 0 22px;
-  border-bottom: 1px solid #49616b;
-  background: linear-gradient(90deg, #152c3b, #244453);
-  color: #bad9d7;
+  border-bottom: 1px solid #b8b29f;
+  background: #dad6c6;
+  color: #454d3f;
   letter-spacing: 0.1em;
 }
 .stage-topline > span:last-child::before {
-  background: #f4cb76;
+  background: #b45838;
 }
 .stage-start {
   display: inline-flex;
@@ -1464,7 +1469,7 @@ p {
   gap: 7px;
   min-height: 44px;
   padding: 5px 0 5px 6px;
-  color: #f4d48c;
+  color: #874128;
   font: inherit;
   letter-spacing: inherit;
   text-align: right;
@@ -1473,7 +1478,7 @@ p {
 }
 .stage-start:hover,
 .stage-start:focus-visible {
-  color: #ffffff;
+  color: #26352d;
 }
 .stage-start span {
   font-size: 15px;
@@ -1483,7 +1488,7 @@ p {
   content: '';
   position: absolute;
   inset: -8px;
-  border: 1px solid #f4d48c;
+  border: 1px solid #a95535;
   border-radius: 50%;
   pointer-events: none;
   opacity: 0;
@@ -1529,7 +1534,7 @@ p {
   width: 100%;
   aspect-ratio: 1145 / 1374;
   transform: translate(-50%, -50%);
-  filter: drop-shadow(0 24px 22px #0007);
+  filter: drop-shadow(0 20px 18px #51473133);
 }
 .robot-float,
 .robot-performer {
@@ -1541,8 +1546,6 @@ p {
   animation: robot-idle 6.4s ease-in-out infinite;
 }
 .robot-performer {
-  /* One shared material grade keeps the body and opening hatches colour-matched. */
-  filter: grayscale(0.72) sepia(0.22) saturate(0.78) contrast(1.04);
   transform: translate3d(var(--look-x, 0px), var(--look-y, 0px), 0) rotate(var(--look-rotate, 0deg));
   transform-origin: 50% 42%;
   transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
@@ -1575,7 +1578,7 @@ p {
   z-index: 0;
   left: 50%;
   top: 43%;
-  border: 1px solid #b7dbd533;
+  border: 1px solid #77795d38;
   border-radius: 50%;
   transform: translate(-50%, -50%);
   pointer-events: none;
@@ -1585,7 +1588,7 @@ p {
 }
 .robot-machine:not([data-active='none']) .robot-orbit {
   transform: translate(-50%, -50%) scale(1.1);
-  border-color: #f3ca7266;
+  border-color: #9c6d454d;
 }
 .orbit-outer {
   width: 112%;
@@ -1605,7 +1608,7 @@ p {
   width: 76%;
   height: 8%;
   border-radius: 50%;
-  background: #0009;
+  background: #615a3e42;
   filter: blur(17px);
   transform-origin: 50% 50%;
   animation: robot-shadow 6.4s ease-in-out infinite;
@@ -1627,7 +1630,7 @@ p {
   display: flex;
   align-items: center;
   gap: 8px;
-  color: #a8c9c5;
+  color: #62664f;
   font: 9px var(--mono);
   letter-spacing: 0.12em;
   pointer-events: none;
@@ -1645,24 +1648,26 @@ p {
   z-index: 4;
   width: 44px;
   height: 44px;
-  border: 1px solid #cfebe1;
+  border: 1px solid #fbf6e8;
   border-radius: 50%;
-  background: #0f2438dc;
+  background: #3b493fef;
   color: #f9f4e7;
-  box-shadow: 0 0 0 4px #0e2739b3;
+  box-shadow:
+    0 0 0 4px #e7e1d2b3,
+    0 3px 7px #403d3026;
   font-size: 11px;
 }
 .robot-hotspot:hover,
 .robot-hotspot.is-active {
-  background: #f3ca72;
-  color: #172637;
+  background: #a44a2e;
+  color: #fffaf0;
   transform: scale(1.06);
 }
 .robot-hotspot.is-active::after {
   content: '';
   position: absolute;
   inset: -8px;
-  border: 1px solid #f3ca72a6;
+  border: 1px solid #a44a2e80;
   border-radius: 50%;
   pointer-events: none;
   animation: hotspot-echo 2.8s ease-out infinite;
@@ -1712,9 +1717,9 @@ p {
   margin: 0 22px 18px;
   padding: 13px 0 0;
   border: 0;
-  border-top: 1px solid #57747b;
+  border-top: 1px solid #b8b29f;
   background: transparent;
-  color: #e0ebe3;
+  color: #454d3f;
   font-size: 10px;
   letter-spacing: 0.11em;
 }
@@ -1725,14 +1730,14 @@ p {
   padding: 5px 0 5px 10px;
   border: 0;
   background: none;
-  color: #b4ccc5;
+  color: #545b4c;
   cursor: pointer;
   font: 9px var(--mono);
   letter-spacing: 0.08em;
 }
 .motion-pause:hover,
 .motion-pause:focus-visible {
-  color: #f3ca72;
+  color: #874128;
 }
 .robot-machine[data-motion='paused'] .robot-float,
 .robot-machine[data-motion='paused'] .robot-plinth,
@@ -1740,7 +1745,7 @@ p {
   animation-play-state: paused;
 }
 .dialogue-cursor {
-  background: #f3ca72;
+  background: #a95535;
   width: 6px;
   height: 12px;
 }
@@ -1895,7 +1900,7 @@ p {
   background: #f3ca72;
 }
 .portfolio-footer {
-  background: #152737;
+  background: #343f35;
 }
 .robot-machine:not([data-active='none']) .robot-assembled {
   opacity: 1;
@@ -2358,7 +2363,7 @@ p {
   }
   .robot-stage {
     order: 0;
-    border-top: 1px solid #142536;
+    border-top: 1px solid #b8b29f;
   }
   .module-detail {
     order: 2;
